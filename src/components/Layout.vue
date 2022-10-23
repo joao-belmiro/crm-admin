@@ -627,7 +627,7 @@ main {
   margin-top: 80px;
   padding: 2rem 1.5rem;
   background: #f1f5f0;
-  height: calc(120vh- 90px);
+  height: calc(120vh - 90px);
   @media only screen and (max-width: 970px) {
   }
   .cards {
