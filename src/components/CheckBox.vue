@@ -42,7 +42,10 @@ export default {
   &:hover {
     background-color: rgba(195, 195, 195, 0.4);
   }
-input[type="checkbox"] {
+  @media (max-width: 999px) {
+     width: 60px;
+  }
+  input[type="checkbox"] {
   display: block;
   content: '';
   -webkit-appearance: none;
