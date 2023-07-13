@@ -19,8 +19,8 @@
     color: #fff;
     margin-bottom: 10px;
     padding: 16px;
-    gap: 10px;
 }
+
 .notification-border {
     border-radius: 10px;
     border: 0.75px solid #ddd;
@@ -58,4 +58,18 @@
     font-size: 16px;
     font-weight: 600;
     font-style: normal !important;
+}
+@media only screen and (max-width: 768px) {
+    .notification {
+        padding: 10px;
+        font-size: 13px;
+        gap: 10px;
+    }
+    
+    .bt-close {
+        margin-left: 9px !important;
+    }
+    .notification-wrapper {
+        right: 4px;
+    }
 }

@@ -370,7 +370,7 @@ export default {
         icon: 'fas fa-check-circle',
         message: 'Exemplo de notificação de sucesso',
         color: '#28a745',
-        duration: 3000 // Tempo em milissegundos (5 segundos)
+        duration: 30000 // Tempo em milissegundos (5 segundos)
       })
     },
     erroNotification () {
@@ -983,7 +983,7 @@ main {
       display: flex;
       flex-direction: row;
       gap: 16px;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
 
       .n-btn {
         height: 100%;
