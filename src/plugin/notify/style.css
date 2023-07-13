@@ -1,0 +1,61 @@
+.notification-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+}
+
+.notification {
+    word-break: break-all;
+    height: 60px;
+    font-size: 17px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 16px;
+    gap: 10px;
+}
+.notification-border {
+    border-radius: 10px;
+    border: 0.75px solid #ddd;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+.fade-in.active {
+    opacity: 1;
+}
+
+.bt-close {
+    margin-left: 16px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}
+.bt-close:hover {
+    background-color: #f7f7f7;
+    opacity: 0.8;
+}
+.bt-close:hover > i {
+    color: black;
+}
+.icon-close {
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal !important;
+}
