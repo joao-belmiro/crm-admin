@@ -233,6 +233,26 @@
         </div>
         <div class="f-card">
           <div>
+            <h2>Plugin de notificações criado</h2>
+            <hr />
+          </div>
+          <div class="d-flex-notify">
+            <button @click="successNotification" class="n-btn s-color">
+              <i class="fas fa-check-circle"></i> Sucesso
+            </button>
+            <button @click="atentionNotification" class="n-btn a-color">
+              <i class="fa fa-exclamation-triangle"></i> Atenção
+            </button>
+            <button @click="infoNotification" class="n-btn i-color">
+              <i class="fa fa-info-circle"></i> Info
+            </button>
+            <button @click="erroNotification" class="n-btn e-color">
+              <i class="fa fa-times-circle-o"></i> Erro
+            </button>
+          </div>
+        </div>
+        <div class="f-card">
+          <div>
             <h2>Formulário de cadastro</h2>
             <hr />
           </div>
@@ -286,6 +306,7 @@
             </button>
           </div>
         </div>
+        <div></div>
       </main>
     </div>
   </div>
@@ -341,6 +362,40 @@ export default {
           horario: '09:00'
         }
       ]
+    }
+  },
+  methods: {
+    successNotification () {
+      this.$notify({
+        icon: 'fas fa-check-circle',
+        message: 'Exemplo de notificação de sucesso',
+        color: '#28a745',
+        duration: 3000 // Tempo em milissegundos (5 segundos)
+      })
+    },
+    erroNotification () {
+      this.$notify({
+        icon: 'fa fa-times-circle-o',
+        message: 'Exemplo de notificação de erro',
+        color: '#dc3545',
+        duration: 5000 // Tempo em milissegundos (5 segundos)
+      })
+    },
+    atentionNotification () {
+      this.$notify({
+        icon: 'fa fa-exclamation-triangle',
+        message: 'Exemplo de notificação de Atenção',
+        color: '#ffc107',
+        duration: 5000 // Tempo em milissegundos (5 segundos)
+      })
+    },
+    infoNotification () {
+      this.$notify({
+        icon: 'fa fa-info-circle',
+        message: 'Exemplo de notificação de info',
+        color: '#17a2b8',
+        duration: 7000 // Tempo em milissegundos (5 segundos)
+      })
     }
   }
 }
@@ -628,7 +683,6 @@ main {
   padding: 2rem 1.5rem;
   background: #f1f5f0;
   @media only screen and (max-width: 970px) {
-
   }
   .cards {
     width: 100%;
@@ -890,7 +944,9 @@ main {
         cursor: pointer;
         outline: none;
         border: 0;
-
+        @media only screen and (max-width: 999px) {
+          font-size: 0.8rem;
+        }
         &:hover {
           opacity: 0.8;
         }
@@ -910,7 +966,9 @@ main {
         cursor: pointer;
         outline: none;
         border: 0;
-
+        @media only screen and (max-width: 999px) {
+          font-size: 0.8rem;
+        }
         &:hover {
           opacity: 0.8;
         }
@@ -918,6 +976,47 @@ main {
         i {
           margin-right: 5px;
         }
+      }
+    }
+    .d-flex-notify {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      flex-wrap: nowrap;
+
+      .n-btn {
+        height: 100%;
+        color: #fff;
+        font-size: 1rem;
+        padding: 10px 16px;
+        border-radius: 6px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        @media only screen and (max-width: 999px) {
+          font-size: 0.8rem;
+        }
+        &:hover {
+          opacity: 0.8;
+        }
+
+        i {
+          margin-right: 5px;
+        }
+      }
+      .s-color {
+        background-color: #28a745;
+      }
+      .e-color {
+        background-color: #dc3545;
+      }
+      .a-color {
+        background-color: #ffc107;
+      }
+      .i-color {
+        background-color: #17a2b8;
       }
     }
   }
