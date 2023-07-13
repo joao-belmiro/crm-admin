@@ -15,7 +15,6 @@ const NotificationPlugin = {
       i.innerHTML = '&#10005;'
       buttton.appendChild(i)
       const notification = document.createElement('div')
-      console.log(data)
       notification.style.backgroundColor = data.color
       notification.classList.add('fade-in')
       notification.classList.add('notification', 'notification-border')
@@ -31,7 +30,6 @@ const NotificationPlugin = {
       notification.appendChild(span)
       notification.appendChild(buttton)
       wrapperNotify.appendChild(notification)
-      console.log(notification)
       buttton.addEventListener('click', () => {
         removeChild(wrapperNotify, notification)
       })
