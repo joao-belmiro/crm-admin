@@ -8,12 +8,13 @@
 }
 
 .notification {
+    position: relative;
     word-break: break-all;
-    height: 60px;
+    height: 70px;
     font-size: 17px;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     color: #fff;
@@ -21,7 +22,27 @@
     padding: 16px;
     gap: 16px;
 }
+.progress-bar {
+    appearance: none;
+    position: absolute;
+    width: 98%;
+    right: 5px;
+    bottom: 0;
+    height: 4px;
+}
+progress {
+    appearance: none;
+    border: none;
+}
+progress[value]::-webkit-progress-bar{
+  background-color: transparent;
+}
+progress::-webkit-progress-value {
+    background-color: white;
+    transition: width 0.5s ease-in-out;
+    border-radius: 0 2px 2px 2px;
 
+}
 .notification-border {
     border-radius: 10px;
     border: 0.75px solid #ddd;
